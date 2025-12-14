@@ -1,0 +1,3 @@
+# This directory contains log files generated during training and evaluation.
+# The main log file is run.log which captures all pipeline output.
+

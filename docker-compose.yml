@@ -1,0 +1,32 @@
+# Docker Compose for Ankle Alignment Classification
+#
+# Run the full pipeline:
+#   docker-compose up
+#
+# Run in background:
+#   docker-compose up -d
+#
+# View logs:
+#   docker-compose logs -f
+#
+# Stop:
+#   docker-compose down
+services:
+  ankle-align:
+    build: .
+    container_name: ankle-align
+    ports:
+      - "7860:7860"
+    volumes:
+      # Mount local directories for data persistence
+      - ./data:/app/data
+      - ./models:/app/models
+      - ./log:/app/log
+      - ./anklealign:/app/anklealign
+    environment:
+      - PYTHONUNBUFFERED=1
+      - PORT=7860
+      - GRADIO_SERVER_NAME=0.0.0.0
+    # Run the full pipeline by default
+    command: ["./run.sh", "pipeline"]
+
