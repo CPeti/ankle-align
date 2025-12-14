@@ -41,15 +41,15 @@ log_message ""
 case $COMMAND in
     preprocess)
         log_message "Running data preprocessing..."
-        python src/01-data-preprocessing.py 2>&1 | tee -a "$LOG_FILE"
+        python src/01-data-preprocessing.py
         ;;
     train)
         log_message "Running training..."
-        python src/02-training.py 2>&1 | tee -a "$LOG_FILE"
+        python src/02-training.py
         ;;
     evaluate)
         log_message "Running evaluation..."
-        python src/03-evaluation.py 2>&1 | tee -a "$LOG_FILE"
+        python src/03-evaluation.py
         ;;
     inference|demo)
         log_message "Running inference on demo data..."
@@ -57,7 +57,7 @@ case $COMMAND in
         if [ -d "data/processed/test" ]; then
             DEMO_IMAGES=$(find data/processed/test -name "*.png" | head -5)
             if [ -n "$DEMO_IMAGES" ]; then
-                python src/04-inference.py --input $DEMO_IMAGES 2>&1 | tee -a "$LOG_FILE"
+                python src/04-inference.py --input $DEMO_IMAGES
             else
                 log_message "No demo images found in data/processed/test"
             fi
@@ -67,7 +67,7 @@ case $COMMAND in
         ;;
     app|serve|web)
         log_message "Starting web application..."
-        python src/app.py --port ${PORT:-7860} 2>&1 | tee -a "$LOG_FILE"
+        python src/app.py --port ${PORT:-7860}
         ;;
     pipeline|all)
         log_message "========================================"
@@ -79,21 +79,21 @@ case $COMMAND in
         log_message "========================================"
         log_message "STEP 1/5: DATA PREPROCESSING"
         log_message "========================================"
-        python src/01-data-preprocessing.py 2>&1 | tee -a "$LOG_FILE"
+        python src/01-data-preprocessing.py
         log_message ""
         
         # Step 2: Model Training
         log_message "========================================"
         log_message "STEP 2/5: MODEL TRAINING"
         log_message "========================================"
-        python src/02-training.py 2>&1 | tee -a "$LOG_FILE"
+        python src/02-training.py
         log_message ""
         
         # Step 3: Model Evaluation
         log_message "========================================"
         log_message "STEP 3/5: MODEL EVALUATION"
         log_message "========================================"
-        python src/03-evaluation.py 2>&1 | tee -a "$LOG_FILE"
+        python src/03-evaluation.py
         log_message ""
         
         # Step 4: Demo Inference
@@ -101,7 +101,7 @@ case $COMMAND in
         log_message "STEP 4/5: DEMO INFERENCE"
         log_message "========================================"
         if [ -d "data/processed/test" ]; then
-            python src/04-inference.py --input-dir data/processed/test --recursive 2>&1 | tee -a "$LOG_FILE"
+            python src/04-inference.py --input-dir data/processed/test --recursive
         else
             log_message "Test data not found, skipping inference demo"
         fi
@@ -114,7 +114,7 @@ case $COMMAND in
         log_message "Gradio app starting on port ${PORT:-7860}..."
         log_message "Access the app at: http://localhost:${PORT:-7860}"
         log_message ""
-        python src/app.py --port ${PORT:-7860} 2>&1 | tee -a "$LOG_FILE"
+        python src/app.py --port ${PORT:-7860}
         ;;
     *)
         echo "Unknown command: $COMMAND"

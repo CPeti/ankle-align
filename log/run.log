@@ -1,524 +1,256 @@
-2025-12-14 01:05:55 - __main__ - INFO - 
-2025-12-14 01:05:55 - INFO - 
-2025-12-14 01:05:55 - __main__ - INFO - ======================================================================
-2025-12-14 01:05:55 - INFO - ======================================================================
-2025-12-14 01:05:55 - __main__ - INFO - ANKLE ALIGNMENT MODEL TRAINING
-2025-12-14 01:05:55 - INFO - ANKLE ALIGNMENT MODEL TRAINING
-2025-12-14 01:05:55 - __main__ - INFO - ======================================================================
-2025-12-14 01:05:55 - INFO - ======================================================================
-2025-12-14 01:05:55 - __main__ - INFO - Started at: 2025-12-14 01:05:55
-2025-12-14 01:05:55 - INFO - Started at: 2025-12-14 01:05:55
-2025-12-14 01:05:55 - __main__ - INFO - 
-2025-12-14 01:05:55 - INFO - 
-2025-12-14 01:05:55 - __main__ - INFO - ======================================================================
-2025-12-14 01:05:55 - INFO - ======================================================================
-2025-12-14 01:05:55 - __main__ - INFO - TRAINING CONFIGURATION
-2025-12-14 01:05:55 - INFO - TRAINING CONFIGURATION
-2025-12-14 01:05:55 - __main__ - INFO - ======================================================================
-2025-12-14 01:05:55 - INFO - ======================================================================
-2025-12-14 01:05:55 - __main__ - INFO -   Device: cpu
-2025-12-14 01:05:55 - INFO -   Device: cpu
-2025-12-14 01:05:55 - __main__ - INFO -   Epochs: 100
-2025-12-14 01:05:55 - INFO -   Epochs: 100
-2025-12-14 01:05:55 - __main__ - INFO -   Batch Size: 32
-2025-12-14 01:05:55 - INFO -   Batch Size: 32
-2025-12-14 01:05:55 - INFO -   Learning Rate: 0.0001
-2025-12-14 01:05:55 - __main__ - INFO -   Learning Rate: 0.0001
-2025-12-14 01:05:55 - __main__ - INFO -   Weight Decay: 0.0001
-2025-12-14 01:05:55 - INFO -   Weight Decay: 0.0001
-2025-12-14 01:05:55 - __main__ - INFO -   Early Stopping Patience: 10
-2025-12-14 01:05:55 - INFO -   Early Stopping Patience: 10
-2025-12-14 01:05:55 - __main__ - INFO -   Freeze Epochs: 0
-2025-12-14 01:05:55 - INFO -   Freeze Epochs: 0
-2025-12-14 01:05:55 - __main__ - INFO -   Dropout: 0.3
-2025-12-14 01:05:55 - INFO -   Dropout: 0.3
-2025-12-14 01:05:55 - __main__ - INFO -   Image Size: 224x224
-2025-12-14 01:05:55 - INFO -   Image Size: 224x224
-2025-12-14 01:05:55 - __main__ - INFO -   Augmentation Enabled: True
-2025-12-14 01:05:55 - INFO -   Augmentation Enabled: True
-2025-12-14 01:05:55 - __main__ - INFO -   Number of Classes: 3
-2025-12-14 01:05:55 - INFO -   Number of Classes: 3
-2025-12-14 01:05:55 - __main__ - INFO - 
-2025-12-14 01:05:55 - INFO - 
-2025-12-14 01:05:55 - __main__ - INFO - 
-2025-12-14 01:05:55 - INFO - 
-2025-12-14 01:05:55 - __main__ - INFO - ======================================================================
-2025-12-14 01:05:55 - INFO - ======================================================================
-2025-12-14 01:05:55 - __main__ - INFO - DATA LOADING
-2025-12-14 01:05:55 - INFO - DATA LOADING
-2025-12-14 01:05:55 - __main__ - INFO - ======================================================================
-2025-12-14 01:05:55 - INFO - ======================================================================
-2025-12-14 01:05:55 - __main__ - INFO - Loading and preprocessing datasets...
-2025-12-14 01:05:55 - INFO - Loading and preprocessing datasets...
-2025-12-14 01:05:55 - __main__ - INFO - Loaded 216 samples from /app/data/processed/train
-2025-12-14 01:05:55 - INFO - Loaded 216 samples from /app/data/processed/train
-2025-12-14 01:05:55 - __main__ - INFO - Loading images to memory...
-2025-12-14 01:05:55 - INFO - Loading images to memory...
-Loading images:   0%|          | 0/216 [00:00<?, ?it/s]Loading images:   7%|▋         | 16/216 [00:00<00:01, 157.82it/s]Loading images:  17%|█▋        | 37/216 [00:00<00:00, 188.03it/s]Loading images:  27%|██▋       | 58/216 [00:00<00:00, 194.61it/s]Loading images:  37%|███▋      | 79/216 [00:00<00:00, 197.96it/s]Loading images:  47%|████▋     | 101/216 [00:00<00:00, 203.29it/s]Loading images:  57%|█████▋    | 123/216 [00:00<00:00, 207.56it/s]Loading images:  68%|██████▊   | 146/216 [00:00<00:00, 212.36it/s]Loading images:  78%|███████▊  | 168/216 [00:00<00:00, 212.06it/s]Loading images:  88%|████████▊ | 190/216 [00:00<00:00, 209.61it/s]Loading images:  98%|█████████▊| 211/216 [00:01<00:00, 209.25it/s]Loading images: 100%|██████████| 216/216 [00:01<00:00, 204.48it/s]
-2025-12-14 01:05:56 - __main__ - INFO - Loaded 47 samples from /app/data/processed/val
-2025-12-14 01:05:56 - INFO - Loaded 47 samples from /app/data/processed/val
-2025-12-14 01:05:56 - __main__ - INFO - Loading images to memory...
-2025-12-14 01:05:56 - INFO - Loading images to memory...
-Loading images:   0%|          | 0/47 [00:00<?, ?it/s]Loading images:  45%|████▍     | 21/47 [00:00<00:00, 204.53it/s]Loading images:  89%|████████▉ | 42/47 [00:00<00:00, 203.68it/s]Loading images: 100%|██████████| 47/47 [00:00<00:00, 204.22it/s]
-2025-12-14 01:05:57 - __main__ - INFO - Loaded 47 samples from /app/data/processed/test
-2025-12-14 01:05:57 - INFO - Loaded 47 samples from /app/data/processed/test
-2025-12-14 01:05:57 - __main__ - INFO - Loading images to memory...
-2025-12-14 01:05:57 - INFO - Loading images to memory...
-Loading images:   0%|          | 0/47 [00:00<?, ?it/s]Loading images:  47%|████▋     | 22/47 [00:00<00:00, 209.49it/s]Loading images:  91%|█████████▏| 43/47 [00:00<00:00, 209.77it/s]Loading images: 100%|██████████| 47/47 [00:00<00:00, 208.24it/s]
-2025-12-14 01:05:57 - __main__ - INFO - 
-2025-12-14 01:05:57 - INFO - 
-2025-12-14 01:05:57 - INFO - ======================================================================
-2025-12-14 01:05:57 - __main__ - INFO - ======================================================================
-2025-12-14 01:05:57 - __main__ - INFO - DATA SUMMARY
-2025-12-14 01:05:57 - INFO - DATA SUMMARY
-2025-12-14 01:05:57 - __main__ - INFO - ======================================================================
-2025-12-14 01:05:57 - INFO - ======================================================================
-2025-12-14 01:05:57 - __main__ - INFO -   Total samples: 310
-2025-12-14 01:05:57 - INFO -   Total samples: 310
-2025-12-14 01:05:57 - __main__ - INFO -   Training samples:      216 (69.7%)
-2025-12-14 01:05:57 - INFO -   Training samples:      216 (69.7%)
-2025-12-14 01:05:57 - __main__ - INFO -   Validation samples:     47 (15.2%)
-2025-12-14 01:05:57 - INFO -   Validation samples:     47 (15.2%)
-2025-12-14 01:05:57 - __main__ - INFO -   Test samples:           47 (15.2%)
-2025-12-14 01:05:57 - INFO -   Test samples:           47 (15.2%)
-2025-12-14 01:05:57 - INFO - 
-2025-12-14 01:05:57 - __main__ - INFO - 
-2025-12-14 01:05:57 - __main__ - INFO -   Class Distribution (Training):
-2025-12-14 01:05:57 - INFO -   Class Distribution (Training):
-2025-12-14 01:05:57 - __main__ - INFO -     Pronation: 87 (40.3%)
-2025-12-14 01:05:57 - INFO -     Pronation: 87 (40.3%)
-2025-12-14 01:05:57 - __main__ - INFO -     Neutral: 95 (44.0%)
-2025-12-14 01:05:57 - INFO -     Neutral: 95 (44.0%)
-2025-12-14 01:05:57 - __main__ - INFO -     Supination: 34 (15.7%)
-2025-12-14 01:05:57 - INFO -     Supination: 34 (15.7%)
-2025-12-14 01:05:57 - __main__ - INFO - 
-2025-12-14 01:05:57 - INFO - 
-2025-12-14 01:05:57 - __main__ - INFO - Data loading complete.
-2025-12-14 01:05:57 - INFO - Data loading complete.
-Downloading: "https://download.pytorch.org/models/resnet18-f37072fd.pth" to /root/.cache/torch/hub/checkpoints/resnet18-f37072fd.pth
-  0%|          | 0.00/44.7M [00:00<?, ?B/s]  4%|▍         | 1.75M/44.7M [00:00<00:02, 18.1MB/s] 10%|▉         | 4.38M/44.7M [00:00<00:01, 22.0MB/s] 15%|█▍        | 6.50M/44.7M [00:00<00:01, 21.3MB/s] 19%|█▉        | 8.62M/44.7M [00:00<00:02, 18.0MB/s] 24%|██▎       | 10.5M/44.7M [00:00<00:02, 15.7MB/s] 27%|██▋       | 12.2M/44.7M [00:00<00:02, 16.2MB/s] 34%|███▎      | 15.0M/44.7M [00:00<00:01, 19.6MB/s] 42%|████▏     | 18.8M/44.7M [00:00<00:01, 25.0MB/s] 48%|████▊     | 21.4M/44.7M [00:01<00:00, 25.3MB/s] 56%|█████▌    | 25.0M/44.7M [00:01<00:00, 28.8MB/s] 62%|██████▏   | 27.9M/44.7M [00:01<00:00, 26.2MB/s] 68%|██████▊   | 30.5M/44.7M [00:01<00:00, 26.5MB/s] 74%|███████▍  | 33.1M/44.7M [00:01<00:00, 24.2MB/s] 80%|███████▉  | 35.6M/44.7M [00:01<00:00, 22.5MB/s] 85%|████████▍ | 37.9M/44.7M [00:01<00:00, 22.5MB/s] 92%|█████████▏| 41.0M/44.7M [00:01<00:00, 24.6MB/s] 98%|█████████▊| 43.8M/44.7M [00:01<00:00, 25.7MB/s]100%|██████████| 44.7M/44.7M [00:02<00:00, 23.2MB/s]
-2025-12-14 01:05:59 - __main__ - INFO - 
-2025-12-14 01:05:59 - INFO - 
-2025-12-14 01:05:59 - __main__ - INFO - ======================================================================
-2025-12-14 01:05:59 - INFO - ======================================================================
-2025-12-14 01:05:59 - __main__ - INFO - MODEL ARCHITECTURE
-2025-12-14 01:05:59 - INFO - MODEL ARCHITECTURE
-2025-12-14 01:05:59 - __main__ - INFO - ======================================================================
-2025-12-14 01:05:59 - INFO - ======================================================================
-2025-12-14 01:05:59 - __main__ - INFO - Model Class: ResNetTransfer
-2025-12-14 01:05:59 - INFO - Model Class: ResNetTransfer
-2025-12-14 01:05:59 - __main__ - INFO - 
-2025-12-14 01:05:59 - INFO - 
-2025-12-14 01:05:59 - __main__ - INFO - Parameter Summary:
-2025-12-14 01:05:59 - INFO - Parameter Summary:
-2025-12-14 01:05:59 - INFO -   Total parameters:           11,178,051
-2025-12-14 01:05:59 - __main__ - INFO -   Total parameters:           11,178,051
-2025-12-14 01:05:59 - __main__ - INFO -   Trainable parameters:       11,178,051
-2025-12-14 01:05:59 - INFO -   Trainable parameters:       11,178,051
-2025-12-14 01:05:59 - INFO -   Non-trainable parameters:            0
-2025-12-14 01:05:59 - __main__ - INFO -   Non-trainable parameters:            0
-2025-12-14 01:05:59 - __main__ - INFO - 
-2025-12-14 01:05:59 - INFO - 
-2025-12-14 01:05:59 - __main__ - INFO - Layer Summary:
-2025-12-14 01:05:59 - INFO - Layer Summary:
-2025-12-14 01:05:59 - __main__ - INFO -   backbone: 11,178,051 params (11,178,051 trainable)
-2025-12-14 01:05:59 - INFO -   backbone: 11,178,051 params (11,178,051 trainable)
-2025-12-14 01:05:59 - __main__ - INFO - 
-2025-12-14 01:05:59 - INFO - 
-2025-12-14 01:05:59 - __main__ - INFO - Class weights:
-2025-12-14 01:05:59 - INFO - Class weights:
-2025-12-14 01:05:59 - __main__ - INFO -   Pronation: 0.670 (count: 87)
-2025-12-14 01:05:59 - INFO -   Pronation: 0.670 (count: 87)
-2025-12-14 01:05:59 - __main__ - INFO -   Neutral: 0.614 (count: 95)
-2025-12-14 01:05:59 - INFO -   Neutral: 0.614 (count: 95)
-2025-12-14 01:05:59 - __main__ - INFO -   Supination: 1.716 (count: 34)
-2025-12-14 01:05:59 - INFO -   Supination: 1.716 (count: 34)
-2025-12-14 01:05:59 - __main__ - INFO - 
-2025-12-14 01:05:59 - INFO - 
-2025-12-14 01:05:59 - __main__ - INFO - ======================================================================
-2025-12-14 01:05:59 - INFO - ======================================================================
-2025-12-14 01:05:59 - __main__ - INFO - TRAINING PROGRESS
-2025-12-14 01:05:59 - INFO - TRAINING PROGRESS
-2025-12-14 01:05:59 - __main__ - INFO - ======================================================================
-2025-12-14 01:05:59 - INFO - ======================================================================
-2025-12-14 01:06:13 - __main__ - INFO - Epoch [001/100] Train Loss: 1.2479 | Train Acc: 0.3472 | Val Loss: 1.1373 | Val Acc: 0.3404 | LR: 1.00e-04 *BEST*
-2025-12-14 01:06:13 - INFO - Epoch [001/100] Train Loss: 1.2479 | Train Acc: 0.3472 | Val Loss: 1.1373 | Val Acc: 0.3404 | LR: 1.00e-04 *BEST*
-2025-12-14 01:06:28 - __main__ - INFO - Epoch [002/100] Train Loss: 0.8934 | Train Acc: 0.5833 | Val Loss: 1.2240 | Val Acc: 0.3404 | LR: 1.00e-04
-2025-12-14 01:06:28 - INFO - Epoch [002/100] Train Loss: 0.8934 | Train Acc: 0.5833 | Val Loss: 1.2240 | Val Acc: 0.3404 | LR: 1.00e-04
-2025-12-14 01:06:42 - __main__ - INFO - Epoch [003/100] Train Loss: 0.7116 | Train Acc: 0.7037 | Val Loss: 1.3060 | Val Acc: 0.3617 | LR: 1.00e-04
-2025-12-14 01:06:42 - INFO - Epoch [003/100] Train Loss: 0.7116 | Train Acc: 0.7037 | Val Loss: 1.3060 | Val Acc: 0.3617 | LR: 1.00e-04
-2025-12-14 01:06:55 - __main__ - INFO - Epoch [004/100] Train Loss: 0.5766 | Train Acc: 0.7222 | Val Loss: 1.3403 | Val Acc: 0.3404 | LR: 1.00e-04
-2025-12-14 01:06:55 - INFO - Epoch [004/100] Train Loss: 0.5766 | Train Acc: 0.7222 | Val Loss: 1.3403 | Val Acc: 0.3404 | LR: 1.00e-04
-2025-12-14 01:07:09 - __main__ - INFO - Epoch [005/100] Train Loss: 0.4808 | Train Acc: 0.8287 | Val Loss: 1.3444 | Val Acc: 0.3617 | LR: 5.00e-05
-2025-12-14 01:07:09 - INFO - Epoch [005/100] Train Loss: 0.4808 | Train Acc: 0.8287 | Val Loss: 1.3444 | Val Acc: 0.3617 | LR: 5.00e-05
-2025-12-14 01:07:23 - __main__ - INFO - Epoch [006/100] Train Loss: 0.4576 | Train Acc: 0.8333 | Val Loss: 1.2667 | Val Acc: 0.3830 | LR: 5.00e-05
-2025-12-14 01:07:23 - INFO - Epoch [006/100] Train Loss: 0.4576 | Train Acc: 0.8333 | Val Loss: 1.2667 | Val Acc: 0.3830 | LR: 5.00e-05
-2025-12-14 01:07:37 - __main__ - INFO - Epoch [007/100] Train Loss: 0.3389 | Train Acc: 0.9028 | Val Loss: 1.2485 | Val Acc: 0.4255 | LR: 5.00e-05
-2025-12-14 01:07:37 - INFO - Epoch [007/100] Train Loss: 0.3389 | Train Acc: 0.9028 | Val Loss: 1.2485 | Val Acc: 0.4255 | LR: 5.00e-05
-2025-12-14 01:07:50 - __main__ - INFO - Epoch [008/100] Train Loss: 0.3183 | Train Acc: 0.8935 | Val Loss: 1.2547 | Val Acc: 0.4468 | LR: 5.00e-05
-2025-12-14 01:07:50 - INFO - Epoch [008/100] Train Loss: 0.3183 | Train Acc: 0.8935 | Val Loss: 1.2547 | Val Acc: 0.4468 | LR: 5.00e-05
-2025-12-14 01:08:04 - __main__ - INFO - Epoch [009/100] Train Loss: 0.3417 | Train Acc: 0.8565 | Val Loss: 1.1909 | Val Acc: 0.4468 | LR: 2.50e-05
-2025-12-14 01:08:04 - INFO - Epoch [009/100] Train Loss: 0.3417 | Train Acc: 0.8565 | Val Loss: 1.1909 | Val Acc: 0.4468 | LR: 2.50e-05
-2025-12-14 01:08:17 - __main__ - INFO - Epoch [010/100] Train Loss: 0.2136 | Train Acc: 0.9491 | Val Loss: 1.1706 | Val Acc: 0.4468 | LR: 2.50e-05
-2025-12-14 01:08:17 - INFO - Epoch [010/100] Train Loss: 0.2136 | Train Acc: 0.9491 | Val Loss: 1.1706 | Val Acc: 0.4468 | LR: 2.50e-05
-2025-12-14 01:08:32 - __main__ - INFO - Epoch [011/100] Train Loss: 0.2299 | Train Acc: 0.9120 | Val Loss: 1.1509 | Val Acc: 0.5106 | LR: 2.50e-05
-2025-12-14 01:08:32 - INFO - Epoch [011/100] Train Loss: 0.2299 | Train Acc: 0.9120 | Val Loss: 1.1509 | Val Acc: 0.5106 | LR: 2.50e-05
-2025-12-14 01:08:32 - INFO - 
-Early stopping triggered after 11 epochs
-2025-12-14 01:08:32 - __main__ - INFO - 
-Early stopping triggered after 11 epochs
-2025-12-14 01:08:33 - __main__ - INFO - 
-2025-12-14 01:08:33 - INFO - 
-2025-12-14 01:08:33 - __main__ - INFO - ======================================================================
-2025-12-14 01:08:33 - INFO - ======================================================================
-2025-12-14 01:08:33 - __main__ - INFO - FINAL EVALUATION RESULTS
-2025-12-14 01:08:33 - INFO - FINAL EVALUATION RESULTS
-2025-12-14 01:08:33 - __main__ - INFO - ======================================================================
-2025-12-14 01:08:33 - INFO - ======================================================================
-2025-12-14 01:08:33 - __main__ - INFO - Test Set Metrics:
-2025-12-14 01:08:33 - INFO - Test Set Metrics:
-2025-12-14 01:08:33 - __main__ - INFO -   Test Loss: 0.9463
-2025-12-14 01:08:33 - INFO -   Test Loss: 0.9463
-2025-12-14 01:08:33 - __main__ - INFO -   Test Accuracy: 0.5957
-2025-12-14 01:08:33 - INFO -   Test Accuracy: 0.5957
-2025-12-14 01:08:33 - __main__ - INFO -   Precision (weighted): 0.6107
-2025-12-14 01:08:33 - INFO -   Precision (weighted): 0.6107
-2025-12-14 01:08:33 - __main__ - INFO -   Recall (weighted): 0.5957
-2025-12-14 01:08:33 - INFO -   Recall (weighted): 0.5957
-2025-12-14 01:08:33 - __main__ - INFO -   F1-Score (weighted): 0.6016
-2025-12-14 01:08:33 - INFO -   F1-Score (weighted): 0.6016
-2025-12-14 01:08:33 - __main__ - INFO -   Accuracy (Pronation): 0.6316
-2025-12-14 01:08:33 - INFO -   Accuracy (Pronation): 0.6316
-2025-12-14 01:08:33 - __main__ - INFO -   Accuracy (Neutral): 0.6190
-2025-12-14 01:08:33 - INFO -   Accuracy (Neutral): 0.6190
-2025-12-14 01:08:33 - __main__ - INFO -   Accuracy (Supination): 0.4286
-2025-12-14 01:08:33 - INFO -   Accuracy (Supination): 0.4286
-2025-12-14 01:08:33 - __main__ - INFO - 
-2025-12-14 01:08:33 - INFO - 
-2025-12-14 01:08:33 - __main__ - INFO - Confusion Matrix:
-2025-12-14 01:08:33 - INFO - Confusion Matrix:
-2025-12-14 01:08:33 - __main__ - INFO -     12     5     2
-2025-12-14 01:08:33 - INFO -     12     5     2
-2025-12-14 01:08:33 - __main__ - INFO -      4    13     4
-2025-12-14 01:08:33 - INFO -      4    13     4
-2025-12-14 01:08:33 - __main__ - INFO -      3     1     3
-2025-12-14 01:08:33 - INFO -      3     1     3
-2025-12-14 01:08:33 - __main__ - INFO - 
-2025-12-14 01:08:33 - INFO - 
-2025-12-14 01:08:33 - INFO - Classification Report:
-2025-12-14 01:08:33 - __main__ - INFO - Classification Report:
-2025-12-14 01:08:33 - __main__ - INFO -                 precision    recall  f1-score   support
-2025-12-14 01:08:33 - INFO -                 precision    recall  f1-score   support
-2025-12-14 01:08:33 - __main__ - INFO -      Pronation       0.63      0.63      0.63        19
-2025-12-14 01:08:33 - INFO -      Pronation       0.63      0.63      0.63        19
-2025-12-14 01:08:33 - __main__ - INFO -        Neutral       0.68      0.62      0.65        21
-2025-12-14 01:08:33 - INFO -        Neutral       0.68      0.62      0.65        21
-2025-12-14 01:08:33 - __main__ - INFO -     Supination       0.33      0.43      0.38         7
-2025-12-14 01:08:33 - INFO -     Supination       0.33      0.43      0.38         7
-2025-12-14 01:08:33 - __main__ - INFO -       accuracy                           0.60        47
-2025-12-14 01:08:33 - INFO -       accuracy                           0.60        47
-2025-12-14 01:08:33 - __main__ - INFO -      macro avg       0.55      0.56      0.55        47
-2025-12-14 01:08:33 - INFO -      macro avg       0.55      0.56      0.55        47
-2025-12-14 01:08:33 - __main__ - INFO -   weighted avg       0.61      0.60      0.60        47
-2025-12-14 01:08:33 - INFO -   weighted avg       0.61      0.60      0.60        47
-2025-12-14 01:08:33 - __main__ - INFO - 
-2025-12-14 01:08:33 - INFO - 
-2025-12-14 01:08:33 - __main__ - INFO - 
+2025-12-14 01:44:26 - __main__ - INFO - 
+2025-12-14 01:44:26 - __main__ - INFO - ======================================================================
+2025-12-14 01:44:26 - __main__ - INFO - ANKLE ALIGNMENT MODEL TRAINING
+2025-12-14 01:44:26 - __main__ - INFO - ======================================================================
+2025-12-14 01:44:26 - __main__ - INFO - Started at: 2025-12-14 01:44:26
+2025-12-14 01:44:26 - __main__ - INFO - 
+2025-12-14 01:44:26 - __main__ - INFO - ======================================================================
+2025-12-14 01:44:26 - __main__ - INFO - TRAINING CONFIGURATION
+2025-12-14 01:44:26 - __main__ - INFO - ======================================================================
+2025-12-14 01:44:26 - __main__ - INFO -   Device: cpu
+2025-12-14 01:44:26 - __main__ - INFO -   Epochs: 100
+2025-12-14 01:44:26 - __main__ - INFO -   Batch Size: 32
+2025-12-14 01:44:26 - __main__ - INFO -   Learning Rate: 0.0001
+2025-12-14 01:44:26 - __main__ - INFO -   Weight Decay: 0.0001
+2025-12-14 01:44:26 - __main__ - INFO -   Early Stopping Patience: 10
+2025-12-14 01:44:26 - __main__ - INFO -   Freeze Epochs: 0
+2025-12-14 01:44:26 - __main__ - INFO -   Dropout: 0.3
+2025-12-14 01:44:26 - __main__ - INFO -   Image Size: 224x224
+2025-12-14 01:44:26 - __main__ - INFO -   Augmentation Enabled: True
+2025-12-14 01:44:26 - __main__ - INFO -   Number of Classes: 3
+2025-12-14 01:44:26 - __main__ - INFO - 
+2025-12-14 01:44:26 - __main__ - INFO - 
+2025-12-14 01:44:26 - __main__ - INFO - ======================================================================
+2025-12-14 01:44:26 - __main__ - INFO - DATA LOADING
+2025-12-14 01:44:26 - __main__ - INFO - ======================================================================
+2025-12-14 01:44:26 - __main__ - INFO - Loading and preprocessing datasets...
+2025-12-14 01:44:26 - __main__ - INFO - Loaded 216 samples from /app/data/processed/train
+2025-12-14 01:44:26 - __main__ - INFO - Loading images to memory...
+2025-12-14 01:44:27 - __main__ - INFO - Loaded 47 samples from /app/data/processed/val
+2025-12-14 01:44:27 - __main__ - INFO - Loading images to memory...
+2025-12-14 01:44:27 - __main__ - INFO - Loaded 47 samples from /app/data/processed/test
+2025-12-14 01:44:27 - __main__ - INFO - Loading images to memory...
+2025-12-14 01:44:28 - __main__ - INFO - 
+2025-12-14 01:44:28 - __main__ - INFO - ======================================================================
+2025-12-14 01:44:28 - __main__ - INFO - DATA SUMMARY
+2025-12-14 01:44:28 - __main__ - INFO - ======================================================================
+2025-12-14 01:44:28 - __main__ - INFO -   Total samples: 310
+2025-12-14 01:44:28 - __main__ - INFO -   Training samples:      216 (69.7%)
+2025-12-14 01:44:28 - __main__ - INFO -   Validation samples:     47 (15.2%)
+2025-12-14 01:44:28 - __main__ - INFO -   Test samples:           47 (15.2%)
+2025-12-14 01:44:28 - __main__ - INFO - 
+2025-12-14 01:44:28 - __main__ - INFO -   Class Distribution (Training):
+2025-12-14 01:44:28 - __main__ - INFO -     Pronation: 87 (40.3%)
+2025-12-14 01:44:28 - __main__ - INFO -     Neutral: 95 (44.0%)
+2025-12-14 01:44:28 - __main__ - INFO -     Supination: 34 (15.7%)
+2025-12-14 01:44:28 - __main__ - INFO - 
+2025-12-14 01:44:28 - __main__ - INFO - Data loading complete.
+2025-12-14 01:44:30 - __main__ - INFO - 
+2025-12-14 01:44:30 - __main__ - INFO - ======================================================================
+2025-12-14 01:44:30 - __main__ - INFO - MODEL ARCHITECTURE
+2025-12-14 01:44:30 - __main__ - INFO - ======================================================================
+2025-12-14 01:44:30 - __main__ - INFO - Model Class: ResNetTransfer
+2025-12-14 01:44:30 - __main__ - INFO - 
+2025-12-14 01:44:30 - __main__ - INFO - Parameter Summary:
+2025-12-14 01:44:30 - __main__ - INFO -   Total parameters:           11,178,051
+2025-12-14 01:44:30 - __main__ - INFO -   Trainable parameters:       11,178,051
+2025-12-14 01:44:30 - __main__ - INFO -   Non-trainable parameters:            0
+2025-12-14 01:44:30 - __main__ - INFO - 
+2025-12-14 01:44:30 - __main__ - INFO - Layer Summary:
+2025-12-14 01:44:30 - __main__ - INFO -   backbone: 11,178,051 params (11,178,051 trainable)
+2025-12-14 01:44:30 - __main__ - INFO - 
+2025-12-14 01:44:30 - __main__ - INFO - Class weights:
+2025-12-14 01:44:30 - __main__ - INFO -   Pronation: 0.670 (count: 87)
+2025-12-14 01:44:30 - __main__ - INFO -   Neutral: 0.614 (count: 95)
+2025-12-14 01:44:30 - __main__ - INFO -   Supination: 1.716 (count: 34)
+2025-12-14 01:44:30 - __main__ - INFO - 
+2025-12-14 01:44:30 - __main__ - INFO - ======================================================================
+2025-12-14 01:44:30 - __main__ - INFO - TRAINING PROGRESS
+2025-12-14 01:44:30 - __main__ - INFO - ======================================================================
+2025-12-14 01:44:44 - __main__ - INFO - Epoch [001/100] Train Loss: 1.1223 | Train Acc: 0.4444 | Val Loss: 1.2724 | Val Acc: 0.2340 | LR: 1.00e-04 *BEST*
+2025-12-14 01:44:59 - __main__ - INFO - Epoch [002/100] Train Loss: 0.8305 | Train Acc: 0.6157 | Val Loss: 1.3255 | Val Acc: 0.3617 | LR: 1.00e-04
+2025-12-14 01:45:12 - __main__ - INFO - Epoch [003/100] Train Loss: 0.6996 | Train Acc: 0.6991 | Val Loss: 1.3112 | Val Acc: 0.3617 | LR: 1.00e-04
+2025-12-14 01:45:26 - __main__ - INFO - Epoch [004/100] Train Loss: 0.5967 | Train Acc: 0.7407 | Val Loss: 1.2679 | Val Acc: 0.3617 | LR: 1.00e-04 *BEST*
+2025-12-14 01:45:41 - __main__ - INFO - Epoch [005/100] Train Loss: 0.4953 | Train Acc: 0.7824 | Val Loss: 1.2811 | Val Acc: 0.4043 | LR: 1.00e-04
+2025-12-14 01:45:56 - __main__ - INFO - Epoch [006/100] Train Loss: 0.3574 | Train Acc: 0.8611 | Val Loss: 1.2808 | Val Acc: 0.4255 | LR: 1.00e-04
+2025-12-14 01:46:10 - __main__ - INFO - Epoch [007/100] Train Loss: 0.2866 | Train Acc: 0.8981 | Val Loss: 1.3695 | Val Acc: 0.4255 | LR: 1.00e-04
+2025-12-14 01:46:24 - __main__ - INFO - Epoch [008/100] Train Loss: 0.2327 | Train Acc: 0.9120 | Val Loss: 1.3401 | Val Acc: 0.4468 | LR: 5.00e-05
+2025-12-14 01:46:39 - __main__ - INFO - Epoch [009/100] Train Loss: 0.1945 | Train Acc: 0.9444 | Val Loss: 1.3305 | Val Acc: 0.4255 | LR: 5.00e-05
+2025-12-14 01:46:54 - __main__ - INFO - Epoch [010/100] Train Loss: 0.1863 | Train Acc: 0.9259 | Val Loss: 1.3674 | Val Acc: 0.3830 | LR: 5.00e-05
+2025-12-14 01:47:09 - __main__ - INFO - Epoch [011/100] Train Loss: 0.1435 | Train Acc: 0.9537 | Val Loss: 1.4142 | Val Acc: 0.4043 | LR: 5.00e-05
+2025-12-14 01:47:22 - __main__ - INFO - Epoch [012/100] Train Loss: 0.1035 | Train Acc: 0.9722 | Val Loss: 1.4294 | Val Acc: 0.3830 | LR: 2.50e-05
+2025-12-14 01:47:36 - __main__ - INFO - Epoch [013/100] Train Loss: 0.1039 | Train Acc: 0.9722 | Val Loss: 1.4406 | Val Acc: 0.3830 | LR: 2.50e-05
+2025-12-14 01:47:50 - __main__ - INFO - Epoch [014/100] Train Loss: 0.1008 | Train Acc: 0.9722 | Val Loss: 1.4644 | Val Acc: 0.3830 | LR: 2.50e-05
+2025-12-14 01:47:50 - __main__ - INFO - 
+Early stopping triggered after 14 epochs
+2025-12-14 01:47:52 - __main__ - INFO - 
+2025-12-14 01:47:52 - __main__ - INFO - ======================================================================
+2025-12-14 01:47:52 - __main__ - INFO - FINAL EVALUATION RESULTS
+2025-12-14 01:47:52 - __main__ - INFO - ======================================================================
+2025-12-14 01:47:52 - __main__ - INFO - Test Set Metrics:
+2025-12-14 01:47:52 - __main__ - INFO -   Test Loss: 1.1480
+2025-12-14 01:47:52 - __main__ - INFO -   Test Accuracy: 0.5745
+2025-12-14 01:47:52 - __main__ - INFO -   Precision (weighted): 0.6239
+2025-12-14 01:47:52 - __main__ - INFO -   Recall (weighted): 0.5745
+2025-12-14 01:47:52 - __main__ - INFO -   F1-Score (weighted): 0.5899
+2025-12-14 01:47:52 - __main__ - INFO -   Accuracy (Pronation): 0.5263
+2025-12-14 01:47:52 - __main__ - INFO -   Accuracy (Neutral): 0.6667
+2025-12-14 01:47:52 - __main__ - INFO -   Accuracy (Supination): 0.4286
+2025-12-14 01:47:52 - __main__ - INFO - 
+2025-12-14 01:47:52 - __main__ - INFO - Confusion Matrix:
+2025-12-14 01:47:52 - __main__ - INFO -     10     5     4
+2025-12-14 01:47:52 - __main__ - INFO -      2    14     5
+2025-12-14 01:47:52 - __main__ - INFO -      2     2     3
+2025-12-14 01:47:52 - __main__ - INFO - 
+2025-12-14 01:47:52 - __main__ - INFO - Classification Report:
+2025-12-14 01:47:52 - __main__ - INFO -                 precision    recall  f1-score   support
+2025-12-14 01:47:52 - __main__ - INFO -      Pronation       0.71      0.53      0.61        19
+2025-12-14 01:47:52 - __main__ - INFO -        Neutral       0.67      0.67      0.67        21
+2025-12-14 01:47:52 - __main__ - INFO -     Supination       0.25      0.43      0.32         7
+2025-12-14 01:47:52 - __main__ - INFO -       accuracy                           0.57        47
+2025-12-14 01:47:52 - __main__ - INFO -      macro avg       0.54      0.54      0.53        47
+2025-12-14 01:47:52 - __main__ - INFO -   weighted avg       0.62      0.57      0.59        47
+2025-12-14 01:47:52 - __main__ - INFO - 
+2025-12-14 01:47:52 - __main__ - INFO - 
 Final model saved to: /app/models/final_model.pth
-2025-12-14 01:08:33 - INFO - 
-Final model saved to: /app/models/final_model.pth
-2025-12-14 01:08:33 - __main__ - INFO - Training history saved to: /app/models/training_history.json
-2025-12-14 01:08:33 - INFO - Training history saved to: /app/models/training_history.json
-2025-12-14 01:08:33 - __main__ - INFO - 
-2025-12-14 01:08:33 - INFO - 
-2025-12-14 01:08:33 - __main__ - INFO - ======================================================================
-2025-12-14 01:08:33 - INFO - ======================================================================
-2025-12-14 01:08:33 - __main__ - INFO - TRAINING COMPLETE
-2025-12-14 01:08:33 - INFO - TRAINING COMPLETE
-2025-12-14 01:08:33 - __main__ - INFO - ======================================================================
-2025-12-14 01:08:33 - INFO - ======================================================================
-2025-12-14 01:08:33 - INFO - Completed at: 2025-12-14 01:08:33
-2025-12-14 01:08:33 - __main__ - INFO - Completed at: 2025-12-14 01:08:33
-2025-12-14 01:08:33 - __main__ - INFO - Total epochs trained: 11
-2025-12-14 01:08:33 - INFO - Total epochs trained: 11
-2025-12-14 01:08:33 - __main__ - INFO - Best Validation Loss: 1.1373
-2025-12-14 01:08:33 - INFO - Best Validation Loss: 1.1373
-2025-12-14 01:08:33 - __main__ - INFO - Best Validation Accuracy: 0.3404
-2025-12-14 01:08:33 - INFO - Best Validation Accuracy: 0.3404
-2025-12-14 01:08:33 - __main__ - INFO - Final Test Accuracy: 0.5957
-2025-12-14 01:08:33 - INFO - Final Test Accuracy: 0.5957
-2025-12-14 01:08:33 - __main__ - INFO - Final Test F1-Score: 0.6016
-2025-12-14 01:08:33 - INFO - Final Test F1-Score: 0.6016
-2025-12-14 01:08:33 - __main__ - INFO - Model saved to: /app/models/final_model.pth
-2025-12-14 01:08:33 - INFO - Model saved to: /app/models/final_model.pth
-2025-12-14 01:08:33 - __main__ - INFO - 
-2025-12-14 01:08:33 - INFO - 
-[2025-12-14 01:08:34] 
-[2025-12-14 01:08:34] ========================================
-[2025-12-14 01:08:34] STEP 3/5: MODEL EVALUATION
-[2025-12-14 01:08:34] ========================================
-2025-12-14 01:08:37 - __main__ - INFO - 
-2025-12-14 01:08:37 - INFO - 
-2025-12-14 01:08:37 - __main__ - INFO - ======================================================================
-2025-12-14 01:08:37 - INFO - ======================================================================
-2025-12-14 01:08:37 - __main__ - INFO - ANKLE ALIGNMENT MODEL EVALUATION
-2025-12-14 01:08:37 - INFO - ANKLE ALIGNMENT MODEL EVALUATION
-2025-12-14 01:08:37 - __main__ - INFO - ======================================================================
-2025-12-14 01:08:37 - INFO - ======================================================================
-2025-12-14 01:08:37 - __main__ - INFO - Started at: 2025-12-14 01:08:37
-2025-12-14 01:08:37 - INFO - Started at: 2025-12-14 01:08:37
-2025-12-14 01:08:37 - __main__ - INFO - Loading model from: /app/models/final_model.pth
-2025-12-14 01:08:37 - INFO - Loading model from: /app/models/final_model.pth
-2025-12-14 01:08:37 - __main__ - INFO - Model loaded successfully
-2025-12-14 01:08:37 - INFO - Model loaded successfully
-2025-12-14 01:08:37 - __main__ - INFO -   Training epochs: 11
-2025-12-14 01:08:37 - INFO -   Training epochs: 11
-2025-12-14 01:08:37 - __main__ - INFO -   Best val accuracy: 0.3404
-2025-12-14 01:08:37 - INFO -   Best val accuracy: 0.3404
-2025-12-14 01:08:37 - __main__ - INFO - 
+2025-12-14 01:47:52 - __main__ - INFO - Training history saved to: /app/models/training_history.json
+2025-12-14 01:47:52 - __main__ - INFO - 
+2025-12-14 01:47:52 - __main__ - INFO - ======================================================================
+2025-12-14 01:47:52 - __main__ - INFO - TRAINING COMPLETE
+2025-12-14 01:47:52 - __main__ - INFO - ======================================================================
+2025-12-14 01:47:52 - __main__ - INFO - Completed at: 2025-12-14 01:47:52
+2025-12-14 01:47:52 - __main__ - INFO - Total epochs trained: 14
+2025-12-14 01:47:52 - __main__ - INFO - Best Validation Loss: 1.2679
+2025-12-14 01:47:52 - __main__ - INFO - Best Validation Accuracy: 0.3617
+2025-12-14 01:47:52 - __main__ - INFO - Final Test Accuracy: 0.5745
+2025-12-14 01:47:52 - __main__ - INFO - Final Test F1-Score: 0.5899
+2025-12-14 01:47:52 - __main__ - INFO - Model saved to: /app/models/final_model.pth
+2025-12-14 01:47:52 - __main__ - INFO - 
+[2025-12-14 01:47:53] 
+[2025-12-14 01:47:53] ========================================
+[2025-12-14 01:47:53] STEP 3/5: MODEL EVALUATION
+[2025-12-14 01:47:53] ========================================
+2025-12-14 01:47:56 - __main__ - INFO - 
+2025-12-14 01:47:56 - __main__ - INFO - ======================================================================
+2025-12-14 01:47:56 - __main__ - INFO - ANKLE ALIGNMENT MODEL EVALUATION
+2025-12-14 01:47:56 - __main__ - INFO - ======================================================================
+2025-12-14 01:47:56 - __main__ - INFO - Started at: 2025-12-14 01:47:56
+2025-12-14 01:47:56 - __main__ - INFO - Loading model from: /app/models/final_model.pth
+2025-12-14 01:47:56 - __main__ - INFO - Model loaded successfully
+2025-12-14 01:47:56 - __main__ - INFO -   Training epochs: 14
+2025-12-14 01:47:56 - __main__ - INFO -   Best val accuracy: 0.3617
+2025-12-14 01:47:56 - __main__ - INFO - 
 Loading test data...
-2025-12-14 01:08:37 - INFO - 
-Loading test data...
-2025-12-14 01:08:37 - __main__ - INFO - Test samples: 47
-2025-12-14 01:08:37 - INFO - Test samples: 47
-2025-12-14 01:08:37 - __main__ - INFO - 
+2025-12-14 01:47:56 - __main__ - INFO - Test samples: 47
+2025-12-14 01:47:56 - __main__ - INFO - 
 Running evaluation...
-2025-12-14 01:08:37 - INFO - 
-Running evaluation...
-Evaluating:   0%|          | 0/2 [00:00<?, ?it/s]Evaluating:  50%|█████     | 1/2 [00:00<00:00,  1.60it/s]Evaluating: 100%|██████████| 2/2 [00:00<00:00,  2.30it/s]Evaluating: 100%|██████████| 2/2 [00:00<00:00,  2.16it/s]
-2025-12-14 01:08:38 - INFO - 
+2025-12-14 01:47:57 - __main__ - INFO - 
 Computing metrics...
-2025-12-14 01:08:38 - __main__ - INFO - 
-Computing metrics...
-2025-12-14 01:08:38 - __main__ - INFO - 
-2025-12-14 01:08:38 - INFO - 
-2025-12-14 01:08:38 - __main__ - INFO - ======================================================================
-2025-12-14 01:08:38 - INFO - ======================================================================
-2025-12-14 01:08:38 - __main__ - INFO - FINAL EVALUATION RESULTS
-2025-12-14 01:08:38 - INFO - FINAL EVALUATION RESULTS
-2025-12-14 01:08:38 - __main__ - INFO - ======================================================================
-2025-12-14 01:08:38 - INFO - ======================================================================
-2025-12-14 01:08:38 - __main__ - INFO - Test Set Metrics:
-2025-12-14 01:08:38 - INFO - Test Set Metrics:
-2025-12-14 01:08:38 - __main__ - INFO -   Accuracy: 0.5957
-2025-12-14 01:08:38 - INFO -   Accuracy: 0.5957
-2025-12-14 01:08:38 - __main__ - INFO -   Precision (macro): 0.5497
-2025-12-14 01:08:38 - INFO -   Precision (macro): 0.5497
-2025-12-14 01:08:38 - __main__ - INFO -   Recall (macro): 0.5597
-2025-12-14 01:08:38 - INFO -   Recall (macro): 0.5597
-2025-12-14 01:08:38 - __main__ - INFO -   F1-Score (macro): 0.5522
-2025-12-14 01:08:38 - INFO -   F1-Score (macro): 0.5522
-2025-12-14 01:08:38 - __main__ - INFO -   Precision (weighted): 0.6107
-2025-12-14 01:08:38 - INFO -   Precision (weighted): 0.6107
-2025-12-14 01:08:38 - __main__ - INFO -   Recall (weighted): 0.5957
-2025-12-14 01:08:38 - INFO -   Recall (weighted): 0.5957
-2025-12-14 01:08:38 - __main__ - INFO -   F1-Score (weighted): 0.6016
-2025-12-14 01:08:38 - INFO -   F1-Score (weighted): 0.6016
-2025-12-14 01:08:38 - __main__ - INFO -   Accuracy (Pronation): 0.6316
-2025-12-14 01:08:38 - INFO -   Accuracy (Pronation): 0.6316
-2025-12-14 01:08:38 - __main__ - INFO -   F1-Score (Pronation): 0.6316
-2025-12-14 01:08:38 - INFO -   F1-Score (Pronation): 0.6316
-2025-12-14 01:08:38 - __main__ - INFO -   AUC (Pronation): 0.7801
-2025-12-14 01:08:38 - INFO -   AUC (Pronation): 0.7801
-2025-12-14 01:08:38 - __main__ - INFO -   Accuracy (Neutral): 0.6190
-2025-12-14 01:08:38 - INFO -   Accuracy (Neutral): 0.6190
-2025-12-14 01:08:38 - INFO -   F1-Score (Neutral): 0.6500
-2025-12-14 01:08:38 - __main__ - INFO -   F1-Score (Neutral): 0.6500
-2025-12-14 01:08:38 - __main__ - INFO -   AUC (Neutral): 0.7692
-2025-12-14 01:08:38 - INFO -   AUC (Neutral): 0.7692
-2025-12-14 01:08:38 - __main__ - INFO -   Accuracy (Supination): 0.4286
-2025-12-14 01:08:38 - INFO -   Accuracy (Supination): 0.4286
-2025-12-14 01:08:38 - __main__ - INFO -   F1-Score (Supination): 0.3750
-2025-12-14 01:08:38 - INFO -   F1-Score (Supination): 0.3750
-2025-12-14 01:08:38 - __main__ - INFO -   AUC (Supination): 0.7857
-2025-12-14 01:08:38 - INFO -   AUC (Supination): 0.7857
-2025-12-14 01:08:38 - __main__ - INFO - 
-2025-12-14 01:08:38 - INFO - 
-2025-12-14 01:08:38 - __main__ - INFO - Confusion Matrix:
-2025-12-14 01:08:38 - INFO - Confusion Matrix:
-2025-12-14 01:08:38 - __main__ - INFO -     12     5     2
-2025-12-14 01:08:38 - INFO -     12     5     2
-2025-12-14 01:08:38 - __main__ - INFO -      4    13     4
-2025-12-14 01:08:38 - INFO -      4    13     4
-2025-12-14 01:08:38 - __main__ - INFO -      3     1     3
-2025-12-14 01:08:38 - INFO -      3     1     3
-2025-12-14 01:08:38 - __main__ - INFO - 
-2025-12-14 01:08:38 - INFO - 
-2025-12-14 01:08:38 - __main__ - INFO - Classification Report:
-2025-12-14 01:08:38 - INFO - Classification Report:
-2025-12-14 01:08:38 - __main__ - INFO -                 precision    recall  f1-score   support
-2025-12-14 01:08:38 - INFO -                 precision    recall  f1-score   support
-2025-12-14 01:08:38 - __main__ - INFO -      Pronation       0.63      0.63      0.63        19
-2025-12-14 01:08:38 - INFO -      Pronation       0.63      0.63      0.63        19
-2025-12-14 01:08:38 - __main__ - INFO -        Neutral       0.68      0.62      0.65        21
-2025-12-14 01:08:38 - INFO -        Neutral       0.68      0.62      0.65        21
-2025-12-14 01:08:38 - INFO -     Supination       0.33      0.43      0.38         7
-2025-12-14 01:08:38 - __main__ - INFO -     Supination       0.33      0.43      0.38         7
-2025-12-14 01:08:38 - __main__ - INFO -       accuracy                           0.60        47
-2025-12-14 01:08:38 - INFO -       accuracy                           0.60        47
-2025-12-14 01:08:38 - __main__ - INFO -      macro avg       0.55      0.56      0.55        47
-2025-12-14 01:08:38 - INFO -      macro avg       0.55      0.56      0.55        47
-2025-12-14 01:08:38 - __main__ - INFO -   weighted avg       0.61      0.60      0.60        47
-2025-12-14 01:08:38 - INFO -   weighted avg       0.61      0.60      0.60        47
-2025-12-14 01:08:38 - __main__ - INFO - 
-2025-12-14 01:08:38 - INFO - 
-2025-12-14 01:08:38 - __main__ - INFO - Per-Class Details:
-2025-12-14 01:08:38 - INFO - Per-Class Details:
-2025-12-14 01:08:38 - __main__ - INFO -   Pronation:
-2025-12-14 01:08:38 - INFO -   Pronation:
-2025-12-14 01:08:38 - __main__ - INFO -     Precision: 0.6316
-2025-12-14 01:08:38 - INFO -     Precision: 0.6316
-2025-12-14 01:08:38 - __main__ - INFO -     Recall:    0.6316
-2025-12-14 01:08:38 - INFO -     Recall:    0.6316
-2025-12-14 01:08:38 - __main__ - INFO -     F1 Score:  0.6316
-2025-12-14 01:08:38 - INFO -     F1 Score:  0.6316
-2025-12-14 01:08:38 - __main__ - INFO -     Support:   19
-2025-12-14 01:08:38 - INFO -     Support:   19
-2025-12-14 01:08:38 - __main__ - INFO -     AUC:       0.7801
-2025-12-14 01:08:38 - INFO -     AUC:       0.7801
-2025-12-14 01:08:38 - INFO -   Neutral:
-2025-12-14 01:08:38 - __main__ - INFO -   Neutral:
-2025-12-14 01:08:38 - __main__ - INFO -     Precision: 0.6842
-2025-12-14 01:08:38 - INFO -     Precision: 0.6842
-2025-12-14 01:08:38 - __main__ - INFO -     Recall:    0.6190
-2025-12-14 01:08:38 - INFO -     Recall:    0.6190
-2025-12-14 01:08:38 - __main__ - INFO -     F1 Score:  0.6500
-2025-12-14 01:08:38 - INFO -     F1 Score:  0.6500
-2025-12-14 01:08:38 - __main__ - INFO -     Support:   21
-2025-12-14 01:08:38 - INFO -     Support:   21
-2025-12-14 01:08:38 - __main__ - INFO -     AUC:       0.7692
-2025-12-14 01:08:38 - INFO -     AUC:       0.7692
-2025-12-14 01:08:38 - __main__ - INFO -   Supination:
-2025-12-14 01:08:38 - INFO -   Supination:
-2025-12-14 01:08:38 - __main__ - INFO -     Precision: 0.3333
-2025-12-14 01:08:38 - INFO -     Precision: 0.3333
-2025-12-14 01:08:38 - INFO -     Recall:    0.4286
-2025-12-14 01:08:38 - __main__ - INFO -     Recall:    0.4286
-2025-12-14 01:08:38 - __main__ - INFO -     F1 Score:  0.3750
-2025-12-14 01:08:38 - INFO -     F1 Score:  0.3750
-2025-12-14 01:08:38 - __main__ - INFO -     Support:   7
-2025-12-14 01:08:38 - INFO -     Support:   7
-2025-12-14 01:08:38 - __main__ - INFO -     AUC:       0.7857
-2025-12-14 01:08:38 - INFO -     AUC:       0.7857
-2025-12-14 01:08:38 - __main__ - INFO - 
+2025-12-14 01:47:57 - __main__ - INFO - 
+2025-12-14 01:47:57 - __main__ - INFO - ======================================================================
+2025-12-14 01:47:57 - __main__ - INFO - FINAL EVALUATION RESULTS
+2025-12-14 01:47:57 - __main__ - INFO - ======================================================================
+2025-12-14 01:47:57 - __main__ - INFO - Test Set Metrics:
+2025-12-14 01:47:57 - __main__ - INFO -   Accuracy: 0.5745
+2025-12-14 01:47:57 - __main__ - INFO -   Precision (macro): 0.5437
+2025-12-14 01:47:57 - __main__ - INFO -   Recall (macro): 0.5405
+2025-12-14 01:47:57 - __main__ - INFO -   F1-Score (macro): 0.5295
+2025-12-14 01:47:57 - __main__ - INFO -   Precision (weighted): 0.6239
+2025-12-14 01:47:57 - __main__ - INFO -   Recall (weighted): 0.5745
+2025-12-14 01:47:57 - __main__ - INFO -   F1-Score (weighted): 0.5899
+2025-12-14 01:47:57 - __main__ - INFO -   Accuracy (Pronation): 0.5263
+2025-12-14 01:47:57 - __main__ - INFO -   F1-Score (Pronation): 0.6061
+2025-12-14 01:47:57 - __main__ - INFO -   AUC (Pronation): 0.7406
+2025-12-14 01:47:57 - __main__ - INFO -   Accuracy (Neutral): 0.6667
+2025-12-14 01:47:57 - __main__ - INFO -   F1-Score (Neutral): 0.6667
+2025-12-14 01:47:57 - __main__ - INFO -   AUC (Neutral): 0.7308
+2025-12-14 01:47:57 - __main__ - INFO -   Accuracy (Supination): 0.4286
+2025-12-14 01:47:57 - __main__ - INFO -   F1-Score (Supination): 0.3158
+2025-12-14 01:47:57 - __main__ - INFO -   AUC (Supination): 0.7000
+2025-12-14 01:47:57 - __main__ - INFO - 
+2025-12-14 01:47:57 - __main__ - INFO - Confusion Matrix:
+2025-12-14 01:47:57 - __main__ - INFO -     10     5     4
+2025-12-14 01:47:57 - __main__ - INFO -      2    14     5
+2025-12-14 01:47:57 - __main__ - INFO -      2     2     3
+2025-12-14 01:47:57 - __main__ - INFO - 
+2025-12-14 01:47:57 - __main__ - INFO - Classification Report:
+2025-12-14 01:47:57 - __main__ - INFO -                 precision    recall  f1-score   support
+2025-12-14 01:47:57 - __main__ - INFO -      Pronation       0.71      0.53      0.61        19
+2025-12-14 01:47:57 - __main__ - INFO -        Neutral       0.67      0.67      0.67        21
+2025-12-14 01:47:57 - __main__ - INFO -     Supination       0.25      0.43      0.32         7
+2025-12-14 01:47:57 - __main__ - INFO -       accuracy                           0.57        47
+2025-12-14 01:47:57 - __main__ - INFO -      macro avg       0.54      0.54      0.53        47
+2025-12-14 01:47:57 - __main__ - INFO -   weighted avg       0.62      0.57      0.59        47
+2025-12-14 01:47:57 - __main__ - INFO - 
+2025-12-14 01:47:57 - __main__ - INFO - Per-Class Details:
+2025-12-14 01:47:57 - __main__ - INFO -   Pronation:
+2025-12-14 01:47:57 - __main__ - INFO -     Precision: 0.7143
+2025-12-14 01:47:57 - __main__ - INFO -     Recall:    0.5263
+2025-12-14 01:47:57 - __main__ - INFO -     F1 Score:  0.6061
+2025-12-14 01:47:57 - __main__ - INFO -     Support:   19
+2025-12-14 01:47:57 - __main__ - INFO -     AUC:       0.7406
+2025-12-14 01:47:57 - __main__ - INFO -   Neutral:
+2025-12-14 01:47:57 - __main__ - INFO -     Precision: 0.6667
+2025-12-14 01:47:57 - __main__ - INFO -     Recall:    0.6667
+2025-12-14 01:47:57 - __main__ - INFO -     F1 Score:  0.6667
+2025-12-14 01:47:57 - __main__ - INFO -     Support:   21
+2025-12-14 01:47:57 - __main__ - INFO -     AUC:       0.7308
+2025-12-14 01:47:57 - __main__ - INFO -   Supination:
+2025-12-14 01:47:57 - __main__ - INFO -     Precision: 0.2500
+2025-12-14 01:47:57 - __main__ - INFO -     Recall:    0.4286
+2025-12-14 01:47:57 - __main__ - INFO -     F1 Score:  0.3158
+2025-12-14 01:47:57 - __main__ - INFO -     Support:   7
+2025-12-14 01:47:57 - __main__ - INFO -     AUC:       0.7000
+2025-12-14 01:47:57 - __main__ - INFO - 
 Generating visualizations...
-2025-12-14 01:08:38 - INFO - 
-Generating visualizations...
-2025-12-14 01:08:39 - __main__ - INFO - Confusion matrix saved to: /app/models/evaluation/confusion_matrix.png
-2025-12-14 01:08:39 - INFO - Confusion matrix saved to: /app/models/evaluation/confusion_matrix.png
-2025-12-14 01:08:39 - __main__ - INFO - ROC curves saved to: /app/models/evaluation/roc_curves.png
-2025-12-14 01:08:39 - INFO - ROC curves saved to: /app/models/evaluation/roc_curves.png
-2025-12-14 01:08:39 - __main__ - INFO - Precision-recall curves saved to: /app/models/evaluation/precision_recall_curves.png
-2025-12-14 01:08:39 - INFO - Precision-recall curves saved to: /app/models/evaluation/precision_recall_curves.png
-2025-12-14 01:08:39 - __main__ - INFO - Per-class metrics saved to: /app/models/evaluation/per_class_metrics.png
-2025-12-14 01:08:39 - INFO - Per-class metrics saved to: /app/models/evaluation/per_class_metrics.png
-2025-12-14 01:08:42 - __main__ - INFO - Misclassification visualization saved
-2025-12-14 01:08:42 - INFO - Misclassification visualization saved
-2025-12-14 01:08:42 - __main__ - INFO - Evaluation report saved to: /app/models/evaluation/evaluation_report.json
-2025-12-14 01:08:42 - INFO - Evaluation report saved to: /app/models/evaluation/evaluation_report.json
-2025-12-14 01:08:42 - __main__ - INFO - 
-2025-12-14 01:08:42 - INFO - 
-2025-12-14 01:08:42 - __main__ - INFO - ======================================================================
-2025-12-14 01:08:42 - INFO - ======================================================================
-2025-12-14 01:08:42 - INFO - EVALUATION COMPLETE
-2025-12-14 01:08:42 - __main__ - INFO - EVALUATION COMPLETE
-2025-12-14 01:08:42 - INFO - ======================================================================
-2025-12-14 01:08:42 - __main__ - INFO - ======================================================================
-2025-12-14 01:08:42 - __main__ - INFO - Completed at: 2025-12-14 01:08:42
-2025-12-14 01:08:42 - INFO - Completed at: 2025-12-14 01:08:42
-2025-12-14 01:08:42 - __main__ - INFO - 
-2025-12-14 01:08:42 - INFO - 
-2025-12-14 01:08:42 - __main__ - INFO - Summary:
-2025-12-14 01:08:42 - INFO - Summary:
-2025-12-14 01:08:42 - INFO -   Test Accuracy:      0.5957
-2025-12-14 01:08:42 - __main__ - INFO -   Test Accuracy:      0.5957
-2025-12-14 01:08:42 - __main__ - INFO -   F1 Score (macro):   0.5522
-2025-12-14 01:08:42 - INFO -   F1 Score (macro):   0.5522
-2025-12-14 01:08:42 - __main__ - INFO -   F1 Score (weighted):0.6016
-2025-12-14 01:08:42 - INFO -   F1 Score (weighted):0.6016
-2025-12-14 01:08:42 - __main__ - INFO -   Misclassified:      19/47 (40.4%)
-2025-12-14 01:08:42 - INFO -   Misclassified:      19/47 (40.4%)
-2025-12-14 01:08:42 - INFO - 
-2025-12-14 01:08:42 - __main__ - INFO - 
-2025-12-14 01:08:42 - __main__ - INFO - Results saved to: /app/models/evaluation
-2025-12-14 01:08:42 - INFO - Results saved to: /app/models/evaluation
-[2025-12-14 01:08:42] 
-[2025-12-14 01:08:42] ========================================
-[2025-12-14 01:08:42] STEP 4/5: DEMO INFERENCE
-[2025-12-14 01:08:42] ========================================
-2025-12-14 01:08:45 - __main__ - INFO - ============================================================
-2025-12-14 01:08:45 - INFO - ============================================================
-2025-12-14 01:08:45 - __main__ - INFO - ANKLE ALIGNMENT INFERENCE
-2025-12-14 01:08:45 - INFO - ANKLE ALIGNMENT INFERENCE
-2025-12-14 01:08:45 - __main__ - INFO - ============================================================
-2025-12-14 01:08:45 - INFO - ============================================================
-2025-12-14 01:08:45 - __main__ - INFO - Loading model from: /app/models/final_model.pth
-2025-12-14 01:08:45 - INFO - Loading model from: /app/models/final_model.pth
-2025-12-14 01:08:45 - __main__ - INFO - Model loaded successfully
-2025-12-14 01:08:45 - INFO - Model loaded successfully
-2025-12-14 01:08:45 - __main__ - INFO -   Classes: ['Pronation', 'Neutral', 'Supination']
-2025-12-14 01:08:45 - INFO -   Classes: ['Pronation', 'Neutral', 'Supination']
-2025-12-14 01:08:45 - __main__ - INFO -   Image size: (224, 224)x(224, 224)
-2025-12-14 01:08:45 - INFO -   Image size: (224, 224)x(224, 224)
-2025-12-14 01:08:45 - __main__ - INFO - 
+2025-12-14 01:47:58 - __main__ - INFO - Confusion matrix saved to: /app/models/evaluation/confusion_matrix.png
+2025-12-14 01:47:58 - __main__ - INFO - ROC curves saved to: /app/models/evaluation/roc_curves.png
+2025-12-14 01:47:58 - __main__ - INFO - Precision-recall curves saved to: /app/models/evaluation/precision_recall_curves.png
+2025-12-14 01:47:58 - __main__ - INFO - Per-class metrics saved to: /app/models/evaluation/per_class_metrics.png
+2025-12-14 01:48:00 - __main__ - INFO - Misclassification visualization saved
+2025-12-14 01:48:00 - __main__ - INFO - Evaluation report saved to: /app/models/evaluation/evaluation_report.json
+2025-12-14 01:48:00 - __main__ - INFO - 
+2025-12-14 01:48:00 - __main__ - INFO - ======================================================================
+2025-12-14 01:48:00 - __main__ - INFO - EVALUATION COMPLETE
+2025-12-14 01:48:00 - __main__ - INFO - ======================================================================
+2025-12-14 01:48:00 - __main__ - INFO - Completed at: 2025-12-14 01:48:00
+2025-12-14 01:48:00 - __main__ - INFO - 
+2025-12-14 01:48:00 - __main__ - INFO - Summary:
+2025-12-14 01:48:00 - __main__ - INFO -   Test Accuracy:      0.5745
+2025-12-14 01:48:00 - __main__ - INFO -   F1 Score (macro):   0.5295
+2025-12-14 01:48:00 - __main__ - INFO -   F1 Score (weighted):0.5899
+2025-12-14 01:48:00 - __main__ - INFO -   Misclassified:      20/47 (42.6%)
+2025-12-14 01:48:00 - __main__ - INFO - 
+2025-12-14 01:48:00 - __main__ - INFO - Results saved to: /app/models/evaluation
+[2025-12-14 01:48:01] 
+[2025-12-14 01:48:01] ========================================
+[2025-12-14 01:48:01] STEP 4/5: DEMO INFERENCE
+[2025-12-14 01:48:01] ========================================
+2025-12-14 01:48:03 - __main__ - INFO - ============================================================
+2025-12-14 01:48:03 - __main__ - INFO - ANKLE ALIGNMENT INFERENCE
+2025-12-14 01:48:03 - __main__ - INFO - ============================================================
+2025-12-14 01:48:03 - __main__ - INFO - Loading model from: /app/models/final_model.pth
+2025-12-14 01:48:04 - __main__ - INFO - Model loaded successfully
+2025-12-14 01:48:04 - __main__ - INFO -   Classes: ['Pronation', 'Neutral', 'Supination']
+2025-12-14 01:48:04 - __main__ - INFO -   Image size: (224, 224)x(224, 224)
+2025-12-14 01:48:04 - __main__ - INFO - 
 Processing directory: data/processed/test
-2025-12-14 01:08:45 - INFO - 
-Processing directory: data/processed/test
-2025-12-14 01:08:45 - __main__ - INFO - Found 47 images in data/processed/test
-2025-12-14 01:08:45 - INFO - Found 47 images in data/processed/test
-
-============================================================
-PREDICTION SUMMARY
-============================================================
-Total images processed: 47
-
-Class distribution:
-  Pronation: 19 (40.4%)
-  Neutral: 19 (40.4%)
-  Supination: 9 (19.1%)
-
-Confidence statistics:
-  Mean: 72.7%
-  Min:  43.5%
-  Max:  98.5%
-
-⚠️  6 predictions with low confidence (<50%):
-    B8V41Y_internet_freepik_01.png: Pronation (43.5%)
-    C6037J_sajat_resztvevo01_04.png: Neutral (45.1%)
-    H51B9J_sajat_reszvevo09_01.png: Supination (47.1%)
-    NX9GA4_sajat_resztvevo01_01.png: Supination (46.6%)
-    NX9GA4_sajat_resztvevo_07_01.png: Supination (48.1%)
-    ... and 1 more
-2025-12-14 01:08:46 - INFO - 
+2025-12-14 01:48:04 - __main__ - INFO - Found 47 images in data/processed/test
+2025-12-14 01:48:05 - __main__ - INFO - 
 Inference complete!
-2025-12-14 01:08:46 - __main__ - INFO - 
-Inference complete!
-[2025-12-14 01:08:47] 
-[2025-12-14 01:08:47] ========================================
-[2025-12-14 01:08:47] STEP 5/5: STARTING WEB APPLICATION
-[2025-12-14 01:08:47] ========================================
-[2025-12-14 01:08:47] Gradio app starting on port 7860...
-[2025-12-14 01:08:47] Access the app at: http://localhost:7860
-[2025-12-14 01:08:47] 
-2025-12-14 01:08:50 - __main__ - INFO - ============================================================
-2025-12-14 01:08:50 - INFO - ============================================================
-2025-12-14 01:08:50 - __main__ - INFO - ANKLE ALIGNMENT WEB APPLICATION
-2025-12-14 01:08:50 - INFO - ANKLE ALIGNMENT WEB APPLICATION
-2025-12-14 01:08:50 - __main__ - INFO - ============================================================
-2025-12-14 01:08:50 - INFO - ============================================================
-2025-12-14 01:08:50 - INFO - Loading model...
-2025-12-14 01:08:50 - __main__ - INFO - Loading model...
-2025-12-14 01:08:50 - __main__ - INFO - Loading model from: /app/models/final_model.pth
-2025-12-14 01:08:50 - INFO - Loading model from: /app/models/final_model.pth
-2025-12-14 01:08:51 - __main__ - INFO - Model loaded successfully
-2025-12-14 01:08:51 - INFO - Model loaded successfully
-2025-12-14 01:08:51 - __main__ - INFO - Classifier initialized on cpu
-2025-12-14 01:08:51 - INFO - Classifier initialized on cpu
-/app/src/app.py:287: UserWarning: The parameters have been moved from the Blocks constructor to the launch() method in Gradio 6.0: css. Please pass these parameters to launch() instead.
-  with gr.Blocks(css=css, title="Ankle Alignment Classifier") as demo:
-2025-12-14 01:08:52 - __main__ - INFO - Starting server on port 7860...
-2025-12-14 01:08:52 - INFO - Starting server on port 7860...
-2025-12-14 01:08:52 - __main__ - INFO - Share link: Disabled
-2025-12-14 01:08:52 - INFO - Share link: Disabled
-* Running on local URL:  http://0.0.0.0:7860
-* To create a public link, set `share=True` in `launch()`.
+[2025-12-14 01:48:06] 
+[2025-12-14 01:48:06] ========================================
+[2025-12-14 01:48:06] STEP 5/5: STARTING WEB APPLICATION
+[2025-12-14 01:48:06] ========================================
+[2025-12-14 01:48:06] Gradio app starting on port 7860...
+[2025-12-14 01:48:06] Access the app at: http://localhost:7860
+[2025-12-14 01:48:06] 
+2025-12-14 01:48:10 - __main__ - INFO - ============================================================
+2025-12-14 01:48:10 - __main__ - INFO - ANKLE ALIGNMENT WEB APPLICATION
+2025-12-14 01:48:10 - __main__ - INFO - ============================================================
+2025-12-14 01:48:10 - __main__ - INFO - Loading model...
+2025-12-14 01:48:10 - __main__ - INFO - Loading model from: /app/models/final_model.pth
+2025-12-14 01:48:10 - __main__ - INFO - Model loaded successfully
+2025-12-14 01:48:10 - __main__ - INFO - Classifier initialized on cpu
+2025-12-14 01:48:11 - __main__ - INFO - Starting server on port 7860...
+2025-12-14 01:48:11 - __main__ - INFO - Share link: Disabled
