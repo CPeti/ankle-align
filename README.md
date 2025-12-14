@@ -49,7 +49,7 @@ docker compose up
 ```
 Logs are captured automatically where the `LOG_FILE` variable points in the run.sh script. Default value is `log/run.log`.
 
-The gradio server will be available at `http://0.0.0.0:7860`.
+The gradio server will be available at `http://localhost:7860`.
 
 ### File Structure and Functions
 
